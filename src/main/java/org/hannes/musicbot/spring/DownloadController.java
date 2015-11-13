@@ -1,8 +1,6 @@
 package org.hannes.musicbot.spring;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -53,7 +51,7 @@ public class DownloadController {
 		/*
 		 * Return the fixed JSON format
 		 */
-		return base_url + Bootstrap.sig_url("/get?video_id=" + video_id + "&type=video&ts_create=" + (long) ((double) response.get("ts_create")) + "&r=" + response.get("r") + "&h2=" + response.get("h2"));
+		return base_url + Bootstrap.sig_url("/get?video_id=" + video_id + "&ts_create=" + (long) ((double) response.get("ts_create")) + "&r=" + response.get("r") + "&h2=" + response.get("h2"));
 	}
 	
 }
