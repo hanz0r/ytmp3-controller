@@ -60,53 +60,10 @@
 	</dependencies>
 
 	<build>
-		<resources>
-			<resource>
-				<directory>${project.basedir}/src/main/resources</directory>
-			</resource>
-			<resource>
-				<directory>${project.build.directory}/generated-resources</directory>
-			</resource>
-		</resources>
-
 		<plugins>
 			<plugin>
-				<artifactId>maven-enforcer-plugin</artifactId>
-				<version>1.4.1</version>
-				<executions>
-					<execution>
-						<id>enforce</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>enforce</goal>
-						</goals>
-						<configuration>
-							<rules>
-								<!-- Enforce that dependency version numbers converge. If a project 
-									has 2 dependencies, A and B, both depending on the same artifact, C, this 
-									rule will fail the build if A depends on a different version of C then the 
-									version of C depended on by B. -->
-								<dependencyConvergence />
-
-								<requireJavaVersion>
-									<version>${java.version}</version>
-								</requireJavaVersion>
-
-								<requireMavenVersion>
-									<version>3.3</version>
-								</requireMavenVersion>
-
-								<requireNoRepositories />
-
-								<requirePluginVersions />
-
-								<!-- Enforce that the version for each dependency resolved during 
-									a build, is equal to or higher than all transitive dependency declarations. -->
-								<requireUpperBoundDeps />
-							</rules>
-						</configuration>
-					</execution>
-				</executions>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
