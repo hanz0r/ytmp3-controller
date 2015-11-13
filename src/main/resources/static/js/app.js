@@ -18,7 +18,7 @@ var app = (function (youtube, data) {
 
     download_single = function (items, index) {
         $.ajax({
-            url: "http://secret-hollows-7617.herokuapp.com/lookup",
+            url: "/lookup",
             method: "GET",
             data: {
                 video_id: items[index].id.videoId
@@ -47,7 +47,5 @@ var app = (function (youtube, data) {
             download_single(items, index + 1);
         });
     }
-
-
 
 })(youtube, data);
