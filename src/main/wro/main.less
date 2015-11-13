@@ -1,0 +1,143 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+
+	display: none !important;
+
+}
+
+input.ng-dirty {
+  &.ng-invalid {
+    border-color: red;
+  }
+  &.ng-valid {
+    border-color: green;
+  }
+}
+
+.view {
+
+	margin-top: 4em;
+
+}
+
+h1 {
+
+	margin-bottom: 0.5em;
+
+}
+
+.tab-pane {
+
+    margin-top: 0.5em;
+
+}
+
+.modal-footer, fieldset {
+
+	clear: both;
+
+}
+
+.form-group {
+
+    clear: both;
+	padding-bottom: 2em;
+
+}
+
+.glyphicon-search, .glyphicon-plus-sign, .glyphicon-ok, .glyphicon-alert {
+
+	margin-right: 0.5em;
+
+}
+
+#loginForm {
+
+	.col-sm-1, .col-sm-3 {
+
+		padding-left: 0;
+
+	}
+
+}
+
+#failoverDragDrop {
+  clear: both;
+  list-style-type: none;
+  li {
+    margin: 0.2em 0.1em;
+  }
+}
+
+/* http://stackoverflow.com/questions/14793367/how-to-add-a-spinner-icon-to-button-when-its-in-the-loading-state */
+.glyphicon.spinning {
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin2 1s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg); }
+  to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+#redGain, #redOffset {
+  .slider-handle, .slider-selection {
+    background: red;
+  }
+  &[disabled] {
+    .slider-handle, .slider-selection {
+      background: darkred;
+    }
+  }
+}
+
+#greenGain, #greenOffset {
+  .slider-handle, .slider-selection {
+    background: green;
+  }
+  &[disabled] {
+    .slider-handle, .slider-selection {
+      background: darkgreen;
+    }
+  }
+}
+
+#blueGain, #blueOffset {
+  .slider-handle, .slider-selection {
+    background: blue;
+  }
+  &[disabled] {
+    .slider-handle, .slider-selection {
+      background: darkblue;
+    }
+  }
+}
+
+label[data-refresh], *[data-toggle=collapse] {
+  cursor: pointer;
+}
+
+label[data-refresh].refreshing {
+  opacity: 0.5;
+}
+
+.invisible-fade {
+  visibility: hidden;
+  opacity: 0;
+  /*  TODO: keep this in sync with devicesController polling interval  */
+  transition: visibility 0s 5s, opacity 5s linear;
+}
+
+.panel-heading > *:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e114";
+  float: right;
+  color: grey;
+}
+.panel-heading > *.collapsed:after {
+  content: "\e080";
+}
