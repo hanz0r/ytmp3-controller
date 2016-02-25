@@ -1,7 +1,10 @@
 package org.hannes.musicbot.util;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
+import java.nio.charset.Charset;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
@@ -25,9 +28,10 @@ public class Bootstrap {
 	 * @param uri
 	 * @throws ScriptException
 	 * @throws FileNotFoundException 
+	 * @throws URISyntaxException 
 	 */
-	public static void load() throws ScriptException, FileNotFoundException {
-		engine.eval(new InputStreamReader(ClassLoader.getSystemResourceAsStream("client.js")));
+	public static void load() throws ScriptException, FileNotFoundException, URISyntaxException {
+		engine.eval(new InputStreamReader(new FileInputStream("client.js"), Charset.forName("UTF-8")));
 	}
 
 	/**
