@@ -12,6 +12,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class App {
+	
+	/**
+	 * The url to the youtube-mp3 API
+	 */
+	public static final String REMOTE_URL = "http://www.youtube-mp3.org";
 
 	/**
 	 * Application entry point 

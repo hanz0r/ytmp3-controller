@@ -1,19 +1,18 @@
 sig = function(a) {
 	if ("function" == typeof _sig) {
-		var b = "X";
+		var c = "X";
 		try {
-			b = _sig(a)
-		} catch (e) {
+			c = _sig(a)
+		} catch (d) {
 		}
-		if ("X" != b)
-			return b
+		if ("X" != c)
+			return c
 	}
 	return "-1"
 };
-
 sig_url = function(a) {
-	var b = sig(a);
-	return a + "&s=" + escape(b)
+	var c = sig(a);
+	return a + "&s=" + escape(c)
 };
 
 var b0I = {

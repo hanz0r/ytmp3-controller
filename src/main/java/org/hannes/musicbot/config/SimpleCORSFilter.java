@@ -1,4 +1,4 @@
-package org.hannes.musicbot.spring;
+package org.hannes.musicbot.config;
 
 import java.io.IOException;
 import javax.servlet.Filter;

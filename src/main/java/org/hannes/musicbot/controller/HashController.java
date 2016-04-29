@@ -1,4 +1,4 @@
-package org.hannes.musicbot.spring;
+package org.hannes.musicbot.controller;
 
 import org.hannes.musicbot.util.Bootstrap;
 import org.springframework.web.bind.annotation.RequestMapping;
