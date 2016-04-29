@@ -31,7 +31,7 @@ public class DownloadController {
 	 * @return
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/lookup", method = RequestMethod.GET)
+	@RequestMapping(value = "/lookup", method = RequestMethod.POST)
 	public String update(@RequestParam(value="video_id") String video_id)  throws Exception {
 		HttpResponse<String> httpResponse = Unirest.get(App.REMOTE_URL + Bootstrap.sig_url(String.format(ITEM_INFO_TEMPLATE, video_id, System.currentTimeMillis()))).asString();
 

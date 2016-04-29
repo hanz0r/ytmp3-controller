@@ -8,7 +8,7 @@ var data = (function () {
         get_file_url: function (video_id, success) {
             $.ajax({
                 url: "http://localhost:8080/lookup/",
-                method: "GET",
+                method: "POST",
                 data: {
                     video_id: video_id
                 }

@@ -10,7 +10,7 @@ var youtube = (function () {
     return {
         search_videos: function(query, success) {
             $.ajax({
-                url: "https://www.googleapis.com/youtube/v3/search?key=" + api_key + "&part=snippet,id&q=" + query,
+                url: "https://www.googleapis.com/youtube/v3/search?key=" + api_key + "&part=snippet,id&q=" + encodeURIComponent(query),
                 method: "GET"
             }).done(success);
         },
@@ -18,7 +18,7 @@ var youtube = (function () {
         request: function(url, success, data) {
             $.ajax({
                 url: "http://localhost:8080/lookup",
-                type: "GET",
+                type: "POST",
                 data: data,
             }).done(success)
         }

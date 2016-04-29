@@ -19,7 +19,7 @@ var app = (function (youtube, data) {
     download_single = function (items, index) {
         $.ajax({
             url: "/lookup",
-            method: "GET",
+            method: "POST",
             data: {
                 video_id: items[index].id.videoId
             }
